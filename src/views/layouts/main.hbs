@@ -12,32 +12,10 @@
     <title>Tasks</title>
   </head>
   <body>
-    <div class="container">
-      <form action="/tasks" method="POST">
-        <div class="mb-3">
-          <label for="title" class="form-label">Title</label>
-          <input
-            type="text"
-            class="form-control"
-            name="title"
-            id="title"
-            placeholder="title"
-          />
-        </div>
-        <div class="mb-3">
-          <label for="description" class="form-label">Description</label>
-          <textarea class="form-control" name="description" id="description" rows="3"></textarea>
-        </div>
-
-        <button type="submit" class="btn btn-success">Add</button>
-      </form>
-    </div>
-
-    <ul>
-        {{#each tasks}}
-            <li>{{title}}</li>
-        {{/each}}
-    </ul>
+    
+    {{> tasks/taskForm }}
+    {{> tasks/taskTable }}
+    
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"

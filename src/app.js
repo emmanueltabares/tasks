@@ -11,11 +11,11 @@ app.set('views', path.join(__dirname, 'views'));
 const exphbs = create({
     defaultLayout: 'main',
     layoutDir: path.join(app.get('views'), 'layouts'),
-    partialsDir: path.join(app.get('views'), 'partials'),
+    partialsDir: path.join(app.get('views'), 'partials'), 
     extname: '.hbs'
 });
 app.engine('hbs', exphbs.engine);
-app.set('view engine', 'hbs');
+app.set('view engine', '.hbs');
 
 //Middlewares
 app.use(morgan('dev'))

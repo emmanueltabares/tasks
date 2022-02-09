@@ -3,7 +3,11 @@ import taskModel from "../models/Task";
 class Task {
 
     async get() {
-        return await taskModel.find().lean()
+        return await taskModel.find().lean();
+    }
+
+    async getById(id) {
+        return await taskModel.findById(id).lean();
     }
 
     async add(task) {
@@ -11,12 +15,12 @@ class Task {
         await newTask.save();
     }
 
-    async update() {
-
+    async update(id, data) {
+        return await taskModel.findByIdAndUpdate(id, data);
     }
 
     async delete() {
-
+        await taskModel.findByIdAndDelete(id);
     }
 }
 

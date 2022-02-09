@@ -1,0 +1,25 @@
+<div class="container">
+  <form action="api/edit/{{task._id}}" method="POST">
+    <div class="mb-3">
+      <label for="title" class="form-label">Title</label>
+      <input
+        type="text"
+        class="form-control"
+        name="title"
+        id="title"
+        placeholder="title"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="description" class="form-label">Description</label>
+      <textarea
+        class="form-control"
+        name="description"
+        id="description"
+        rows="3"
+      ></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-success">Add</button>
+  </form>
+</div>
